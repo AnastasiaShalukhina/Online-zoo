@@ -1,0 +1,63 @@
+html {
+  font-size: 10px;
+  
+}
+
+body {
+  @include font-family;
+  @include font ($style: normal, $weight: 500, $size: 1.6rem, $height: 2.24rem);
+}
+
+h1 {
+  @include font ($style: normal, $weight: 400, $size: 1.9rem, $height: 2.28rem);
+}
+
+h2 {
+  @include font ($style: normal, $weight: 400, $size: 4.8rem, $height: 5.76rem);
+  margin: 0;
+}
+
+h3 {
+  @include font ($style: normal, $weight: 400, $size: 3.6rem, $height: 4.68rem);
+  margin: 0;
+}
+
+h4 {
+  @include font ($style: normal, $weight: 400, $size: 2.4rem, $height: 2.88rem);
+  margin: 0;
+}
+
+.button {
+  display: block;
+  width: 298px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  background: $color-gradient;
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-light;
+  border: none;
+  cursor: pointer;
+  &_rounded {
+    border-radius: 25px;
+  }
+
+  &_squared {
+    border-radius: 5px;
+  }
+
+  &:disabled {
+    background: $color-btn-disabled;
+  }
+
+  &:hover {
+    background: $color-btn-hover;
+  }
+
+  &:active {
+    background: $color-btn-active;
+  }
+
+}
+
+

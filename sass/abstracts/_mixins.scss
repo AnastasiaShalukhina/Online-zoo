@@ -1,0 +1,28 @@
+@mixin font-family {
+  font-family: "Roboto",
+    "Verdana",
+    sans-serif;
+}
+
+@mixin font ($style, $weight, $size, $height) {
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+};
+
+@mixin media-small-descktop {
+  @media (max-width: $descktop-small-width) { @content }
+};
+
+@mixin media-tablet {
+  @media (max-width: $tablet-width) {
+    @content
+  }
+};
+
+@mixin media-mobile {
+  @media (max-width: $mobile-width) {
+    @content
+  }
+};

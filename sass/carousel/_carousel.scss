@@ -1,0 +1,47 @@
+.shown, .next {
+  display: block;
+}
+
+.next { 
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.to-left {
+  animation: left 2s ease-in-out; // animation: ;
+}
+
+.from-left {
+  animation: left 2s ease-in-out;
+  animation-direction: reverse;
+}
+
+.to-right {
+  animation: right 2s ease-in-out;
+  animation-direction: reverse;
+}
+
+.from-right {
+  animation: right 2s ease-in-out;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: 0;
+  }
+}

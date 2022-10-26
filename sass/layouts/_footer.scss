@@ -1,0 +1,360 @@
+.footer {
+  background: $color-backgr-footer;
+}
+
+.footer__wrapper {
+  padding: 41px 0 50px;
+  display: flex;
+  @include media-small-descktop {
+    padding: 40px 20px 39px 25px;
+    position: relative;
+    justify-content: space-between;
+  }
+  @include media-tablet {
+    padding: 10px 20px;
+  }
+  @include media-mobile {
+    display: block;
+    padding: 17px 10px 62px;
+  }
+}
+
+.footer__wrapper.footer__donate {
+  @include media-small-descktop {
+    padding: 40px 20px 11px 25px;
+  }
+  @include media-tablet {
+    padding: 10px 20px 11px 21px;
+  }
+  @include media-mobile {
+    padding: 16px 20px 58px 21px;
+  }
+}
+
+.contacts {
+  position: relative;
+}
+
+.footer__logo {
+  margin-bottom: 68px;
+  justify-content: unset;
+}
+
+.footer__logo {
+  max-width: 82px;
+  display: flex;
+  justify-content: center;
+  @include media-small-descktop {
+    justify-content: flex-start;
+  }
+  @include media-mobile {
+    max-width: unset;
+    justify-content: center;
+    margin-bottom: 86px;
+  }
+}
+
+.logo__link-footer {
+  position: relative;
+  display: block;
+  border: 1px solid $color-light;
+  border-radius: 2px;
+  text-decoration: none;
+  @include media-mobile {
+    border: none;
+  }
+}
+
+.logo__text-footer {
+  color: $color-light;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  margin: 3.55px 4.75px;
+  @include media-tablet {
+    @include font($style: normal, $weight: 400, $size: 1.9rem, $height: 2.28rem);
+    margin: 3.55px 4.75px;
+  }
+}
+
+.logo__image-footer {
+  position: absolute;
+  z-index: 2;
+  left: 12%;
+  bottom: 18%;
+  @include media-tablet {
+    left: 12%;
+    bottom: 18%;
+  }
+  @include media-mobile {
+    left: 58%;
+    bottom: 37%;
+  }
+}
+
+.footer__button {
+  margin-bottom: 44px;
+
+  & .footer__link {
+    text-decoration: none;
+    color: $color-light;
+  }
+  @include media-tablet {
+    margin-top: -36px;
+  }
+  @include media-mobile {
+    margin-top: -5px;
+    margin-bottom: 31px;
+  }
+}
+
+.footer__button.donate {
+  margin-left: -2px;
+}
+
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  @include media-tablet {
+    position: absolute;
+    left: 193%;
+    top: 0;
+  }
+  @include media-mobile {
+    flex-direction: row;
+    left: 53px;
+    top: 54px;
+  }
+
+  & .social-container {
+    display: flex;
+    cursor: pointer;
+
+    & .social-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: $color-icon-backgr;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    & .social__name {
+      @include font ($style: normal, $weight: 400, $size: 1.6rem, $height: 2.24rem);
+      margin-left: 12px;
+      color: $color-light;
+      @include media-tablet {
+        display: none;
+      }
+    }
+
+    &:hover {
+      .social-icon {
+        background: $color-btn-active;
+      }
+      .social__name {
+        color: $color-btn-active;
+      }
+    }
+  }
+}
+
+.socials.donate {
+  @include media-mobile {
+    flex-direction: row;
+    left: 44px;
+    top: 54px;
+  }
+}
+ 
+.social-container:not(:last-child) {
+  margin-bottom: 10px;
+  @include media-small-descktop {
+    margin-bottom: 0;
+  }
+  @include media-tablet {
+    margin-bottom: 10px;
+  }
+  @include media-mobile {
+    margin-right: 30px;
+  }
+}
+
+.social-container.donate:not(:last-child) {
+  @include media-small-descktop {
+    margin-bottom: 0;
+  }
+  @include media-tablet {
+    margin-bottom: 11px;
+  }
+  
+}
+
+.footer__navigation {
+  display: flex;
+  align-items: flex-end;
+  margin-left: 101px;
+  margin-right: 50px;
+  @include media-small-descktop {
+    margin-left: 0;
+    margin-right: 0;
+    position: absolute;
+    bottom: 50px;
+    left: 32%;
+  }
+  @include media-tablet {
+    bottom: 12px;
+    left: 20px;
+  }
+}
+
+.footer__navigation.donate {
+  @include media-small-descktop {
+    bottom: 21px;
+    left: 33%;
+  }
+  @include media-tablet {
+    bottom: 13px;
+    left: 3%;
+  }
+  @include media-mobile {
+    bottom: 6px;
+    left: 6%;
+  }
+}
+
+.navigation__item.footer-item:not(:last-child) {
+  @include media-tablet {
+    margin-right: 37px;
+  }
+  @include media-mobile {
+    margin-right: 30px;
+  }
+}
+
+.navigation__item.donate-footer-item:not(:last-child) {
+  @include media-tablet {
+    margin-right: 36px;
+  }
+  @include media-mobile {
+    margin-right: 30px;
+  }
+}
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  @include media-small-descktop {
+    margin-right: -15px;
+  }
+
+  & .subscribe__title {
+    color: $color-light;
+    margin-bottom: 17px;
+    @include media-tablet {
+      display: none;
+    }
+  }
+}
+
+
+.form-container {
+  & .footer__form {
+    display: flex;
+    @include media-small-descktop {
+      margin-right: 29px;
+    }
+    @include media-tablet {
+      display: none;
+    }
+  }
+  & .footer__form.donation {
+    @include media-small-descktop {
+      margin-right: 35px;
+    }
+  }
+
+  & .footer__input {
+    width: 228px;
+    padding: 10px 7px 10px 10px;
+    margin-right: 16px;
+    background: $color-backgr-footer;
+    border: 0.7px solid $title-colored;
+    border-radius: 2px;
+    color: $color-light;
+    @include media-small-descktop {
+      margin-right: 11px;
+    }
+  }
+
+  &  .footer__input.donation {
+    @include media-small-descktop {
+      width: 209px;
+    }
+  }
+
+  & .form-container__button {
+    width: 129px;
+    background: $color-feedback-backgr;
+    color: $color-backgr-header;
+    border: 1px solid $color-feedback-backgr;
+    border-radius: 5px;
+    letter-spacing: -1px;
+    cursor: pointer;
+  }
+
+  .form-container__button:hover {
+    color: $color-btn-active;
+  }
+}
+
+.rights__container {
+  align-self: flex-end;
+  margin-top: 210px;
+  @include media-small-descktop {
+    margin-top: 215px;
+    margin-right: 15px;
+  }
+  @include media-tablet {
+    margin-top: 207px;
+  }
+  @include media-mobile {
+    margin-top: 0;
+  }
+  
+  & .footer__rights {
+    display: block;
+    margin: 0;
+    @include font ($style: normal, $weight: 100, $size: 1.6rem, $height: 2.08rem);
+    color: $color-light;
+    text-decoration: none;
+    @include media-mobile {
+      letter-spacing: -0.5px;
+    }
+  }
+
+    & .footer__rights:first-child {
+      margin-bottom: 10px;
+    }
+  .footer__rights:hover {
+    color: $color-btn-active;
+    border-bottom: 1px solid $color-btn-active;
+  }
+}
+
+.rights__container.donate {
+  @include media-small-descktop {
+    margin-top: 215px;
+    
+  }
+  @include media-tablet {
+    margin-top: 210px
+  }
+  @include media-mobile {
+    margin-top: 0;
+  }
+}

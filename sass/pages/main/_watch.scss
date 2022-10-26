@@ -1,0 +1,116 @@
+.background-wrapper {
+  
+  background-image: url('../assets/images/main/watch/giant-panda.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  @media (width:1000px) {
+    background-position: -95px 0;
+  }
+  @media (width:640px) {
+    background-position: -63px 0;
+  }
+  @include media-mobile {
+    background-image: url('../assets/images/main/watch/mobile-giant-panda.png');
+    background-position: -19px 21px;
+  }
+}
+
+.watch__wrapper {
+  padding-bottom: 100px;
+  @include media-small-descktop {
+    padding-bottom: 50px;
+    overflow: hidden;
+  }
+  @include media-tablet {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @include media-mobile {
+    padding-top: 35px;
+  }
+}
+
+.donate-watch__wrapper {
+  @include media-tablet {
+    padding-top: 35px;
+  }
+}
+
+.watch__text {
+  @include font ($style: normal, $weight: 700, $size: 10.65rem, $height: 8.0rem);
+  position: relative;
+  margin-left: auto;
+  margin-right: 0;
+  margin-top: 86px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-light;
+  max-width: 500px;
+  z-index: 1;
+  & .text-colored {
+    color: $text-colored;
+  }
+  @include media-small-descktop {
+    @include font ($style: normal, $weight: 700, $size: 8.5rem, $height: 6.4rem);
+    margin-top: 43px;
+  }
+  @include media-tablet {
+    @include font ($style: normal, $weight: 700, $size: 5.4rem, $height: 4.08rem);
+    margin-top: 48px;
+    max-width: 256px;
+  }
+  @include media-mobile {
+    @include font ($style: normal, $weight: 700, $size: 2.8rem, $height: 2.1rem);
+    margin-top: 41px;
+    max-width: 128px;
+  }
+}
+
+.watch__text::before {
+  content: "";
+  width: 465px;
+  height: 465px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 9px;
+  right: 21%;
+  background: $color-gradient;
+  z-index: -1;
+  @include media-small-descktop {
+    width: 367px;
+    height: 367px;
+    right: 30%;
+  }
+  @include media-tablet {
+    width: 237px;
+    height: 237px;
+    right: 20%;
+    bottom: 6px;
+  }
+  @include media-mobile {
+    width: 119px;
+    height: 119px;
+    right: 20%;
+    bottom: 6px;
+  }
+}
+
+.button__right {
+  display: block;
+  margin-right: 100px;
+  margin-left: auto;
+  margin-top: 60px;
+  @include media-small-descktop {
+    margin-top: 40px;
+  }
+  @include media-tablet {
+    margin-top: -6px;
+    margin-right: auto;
+    margin-left: 0;
+  }
+  @include media-mobile {
+    display: none;
+  }
+}
+

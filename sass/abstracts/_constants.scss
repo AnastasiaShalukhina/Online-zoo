@@ -1,0 +1,43 @@
+// colors
+$color-light: #FFFFFF;
+$text-colored: #FFEE2E;
+$title-colored: #FE9013;
+$color-backgr-header: #000000;
+$color-backgr-footer: #111115;
+$color-gradient: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+$color-btn-hover: #E47209;
+$color-btn-active: #4B9200;
+$color-btn-disabled: #767474;
+$color-text: #333B41;
+$color-light-text: #BDBDBD;
+$color-feedback-backgr: #F1F3F2;
+$color-input-backgr: #F5F7F6;
+$color-border-input: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+$color-icon-backgr: rgba(196, 196, 196, 0.5);
+
+// donate
+$donate-feed-backgr: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%),
+linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%),
+linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+$donate-feed-container: rgba(255, 255, 255, 0.52);
+$donate-amount-choose: #404950;
+$amount-line-color: #72828E;
+$input-nunber-border: #929699;
+
+
+// device width
+$descktop-small-width: 1599px; // check on 1000
+$tablet-width: 999px; // check on 640
+$mobile-width: 639px; // check on 320
+
+// wrappers
+$wrapper-desctop: 1160px;
+$wrapper-small-descktop: 940px;
+$wrapper-tablet: 600px;
+$wrapper-mobile: 300px; //300
+
+// burger
+$burger-blackout: rgba(0, 0, 0, 0.9);
+$burger-backgr: #E5E5E5;
+
+

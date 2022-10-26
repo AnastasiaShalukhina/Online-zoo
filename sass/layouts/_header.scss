@@ -1,0 +1,138 @@
+.header {
+  background-color: $color-backgr-header;
+  @include media-tablet {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+    
+  }
+}
+
+.wrapper__header {
+  min-height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include media-tablet {
+    min-height: 34px;
+  }
+}
+
+.logo__container {
+  display: flex;
+  justify-content: center;
+}
+
+.logo__link {
+  position: relative;
+  display: block;
+  border: 1px solid $color-light;
+  border-radius: 2px;
+  text-decoration: none;
+  @include media-tablet {
+    border: none;
+  }
+}
+
+.logo__text {
+  color: $color-light;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  margin: 3.55px 4.75px;
+  @include media-tablet {
+    @include font($style: normal, $weight: 400, $size: 1.2rem, $height: 1.47rem);
+    margin: 2.2px 0;
+  }
+}
+
+.logo__image {
+  position: absolute;
+  z-index: 2;
+  left: 12%;
+  bottom: 18%;
+  @include media-tablet {
+    display: block;
+    width: 8.54px;
+    height: 13.5px;
+    left: 8%;
+    bottom: 17%;
+  }
+}
+
+.header__navigation {
+  padding-right: 375px;
+  @include media-small-descktop {
+    padding-right: 190px;
+  };
+  @include media-tablet {
+    display: none;
+  };
+}
+
+.navigation-list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.navigation__item:not(:last-child) {
+  margin-right: 58px;
+  @include media-small-descktop {
+    margin-right: 48px;
+  }
+}
+
+.active {
+  background: linear-gradient(113.96deg,
+    #F9804B 1.49%,
+    #FE9013 101.44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navigation__link {
+  @extend %transition;
+  text-decoration: none;
+  color: $color-light;
+  &:hover {
+    color: #F9804B;
+  }
+  &:active {
+    @extend %link-active;
+  }
+}
+
+.header-design {
+  display: block;
+  color: $color-light;
+  text-decoration: none;
+  &:hover {
+      color: #F9804B;
+    }
+  
+  &:active {
+    @extend %link-active;
+  }
+  @include media-tablet {
+    display: none;
+  }
+}
+
+.burger-btn-donate,
+.burger-btn-main {
+  width: 18px;
+  height: 10px;
+  background: url("../assets/images/burger.png");
+  display: none;
+  
+  @include media-tablet {
+    display: block;
+    margin-bottom: 2px;
+    cursor: pointer;
+  }
+}
+

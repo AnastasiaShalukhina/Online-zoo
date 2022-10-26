@@ -1,0 +1,393 @@
+.pets {
+  position: relative;
+}
+
+.pets__wrapper {
+  padding: 102px 0 100px;
+  @media (min-width:$descktop-small-width) and (max-width: 1599px) {
+    padding-bottom: 160px;
+  }
+  @include media-small-descktop {
+    padding: 102px 0 143px;
+  }
+  @include media-tablet {
+    padding: 0 0 100px;
+  }
+  @include media-mobile {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 60px;
+  }
+}
+
+.card-container__first-row, .card-container__second-row {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative; 
+  
+}
+
+.slider-item {
+  position: relative;
+  animation: 3s ease-in-out;
+  display: none;
+}
+
+.slider-item__wrapper {
+  display: flex;
+  justify-content: space-between;
+  
+
+  .card:not(:last-child) {
+      margin-right: 29px; 
+    }
+  @include media-small-descktop {
+    .card:not(:last-child) {
+      margin-right: 26px; 
+    }
+
+    .card.card__penguins {
+      margin-right: 0;
+    }
+  }
+
+  @include media-tablet {
+    .card.card__penguins {
+      margin-right: 29px;
+    }
+
+    .card.card__eagles {
+      margin-right: 0;
+    }
+  }
+
+  @include media-mobile {
+    .card:not(:last-child) {
+      margin-right: 0;
+    }
+  }
+}
+
+.card-container__first-row {
+  @media (max-width: 1599px) {
+    margin-bottom: 80px;
+  }
+  @include media-mobile {
+    margin-bottom: 0;
+  }
+}
+
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-width: 366px; // a
+  margin-right: 26px; // a
+  margin-bottom: 14px;
+  border: 1px solid $color-btn-hover;
+  border-radius: 5px;
+  overflow: hidden; // a
+  cursor: pointer;
+  &:hover {
+    @extend %transition;
+    .card-image {
+      @extend %transition;
+      transform: scale(1.2);
+      filter: brightness(0.7);
+    }
+    .description__text {
+      transform: translateY(-60px);
+      color: $text-colored;
+      @extend %transition;
+    }
+    .card__blackout {
+      background: rgba(0, 0, 0, 0.4);
+    }
+  }
+    @include media-small-descktop {
+      //a
+      min-width: 294px;
+    }
+  
+    @include media-tablet {
+      // a
+      min-width: 285px;
+    }
+}
+
+.card-image {
+  display: block;
+  width: 100%;
+  
+  @include media-mobile {
+    min-width: 285px;
+  }
+}
+
+.card.card__alligator {
+  @include media-mobile {
+    max-width: 285px;
+    margin-left: 10px;
+  }
+}
+
+
+.description-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 8px 14px 18px;
+  
+}
+
+.card-container__first-row {
+  @include media-small-descktop {
+    .description-container {
+      padding: 14px 8px 10px 13px;
+    }
+  }
+  @include media-tablet {
+    .description-container {
+      padding: 8px 8px 3px 13px;
+    }
+  }
+  @include media-mobile {
+    flex-wrap: wrap;
+    padding: 8px 8px 3px 10px;
+  }
+}
+
+// inclusive paddings and margins for mobile version
+.card-container__first-row .card__pandas .description-container {
+  @include media-mobile {
+    padding: 5px 8px 6px 7px;
+  }
+}
+
+.card-container__first-row .card__pandas, .card-container__first-row .card__eagles {
+  @include media-mobile {
+    margin-bottom: 20px;
+  }
+}
+
+.card-container__first-row .card__eagles .description-container, .card-container__first-row .card__gorillas .description-container  {
+  @include media-mobile {
+    padding: 5px 8px 10px 7px;
+  }
+}
+
+.card-container__second-row .card__alligator .description-container {
+  @include media-mobile {
+    padding: 7px 5px 15px 7px;
+  }
+}
+ 
+
+///////////////////////////////////////////////////////
+
+.card-container__second-row {
+  @include media-small-descktop {
+    .description-container {
+      padding: 8px 8px 10px 18px;
+    }
+  }
+  @include media-tablet {
+    .description-container {
+      padding: 8px 8px 3px 13px;
+    }
+  }
+  @include media-mobile {
+    flex-wrap: wrap;
+  }
+}
+
+.animal__name {
+  text-transform: uppercase;
+  margin: 0;
+  @include media-tablet {
+    @include font($style: normal, $weight: 500, $size: 1.3rem, $height: 1.8rem);
+  }
+}
+
+.animal__place {
+  @include font($style: normal, $weight: 300, $size: 1.5rem, $height: 1.8rem);
+  margin: 0;
+  @include media-tablet {
+    @include font($style: normal, $weight: 300, $size: 1.2rem, $height: 1.2rem);
+  }
+}
+
+.animal-icon__vegan {
+  width: 33px;
+  height: 37px; 
+  background: url('../assets/images/icons/banana-bamboo.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include media-mobile {
+    width: 26px;
+    height: 23px;
+  }
+}
+
+.animal-icon__predator {
+  width: 48px;
+  height: 38px;
+  background: url('../assets/images/icons/meet-fish.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include media-mobile {
+    width: 37px;
+    height: 30px;
+  }
+}
+
+// alligator is appeared at mobile version
+.card.card__alligator {
+  display: none;
+  @include media-tablet {
+    display: flex;
+  }
+
+}
+
+.card.card__sloth,  .card.card__gorillas, .card.card__cheetahs {
+  @include media-tablet {
+    display: none;
+  }
+}
+
+.card.card__gorillas {
+  @include media-mobile {
+    display: flex;
+  }
+}
+
+.card.card__penguins, .card.card__sloth {
+  @include media-mobile {
+    display: none;
+  }
+}
+
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: $color-gradient;
+  cursor: pointer;
+  
+  &:disabled {
+      background: $color-btn-disabled;
+    }
+  
+  &:hover {
+    background: $color-btn-hover;
+  }
+
+  &:active {
+    background: $color-btn-active;
+  }
+
+}
+
+.arrow-left {
+  position: absolute;
+  left: 137px;
+  top: 42%;
+  @include media-small-descktop {
+    left: 350px;
+    top: 40%;
+  }
+  @include media-tablet {
+    left: 245px;
+    top: 35%;
+  }
+  @include media-mobile {
+    display: none;
+  }
+}
+
+.arrow-right {
+  position: absolute;
+  right: 137px;
+  top: 42%;
+  @include media-small-descktop {
+    right: 350px;
+    top: 40%;
+  }
+  @include media-tablet {
+    right: 245px;
+    top: 35%;
+  }
+  @include media-mobile {
+    display: none;
+  }
+}
+
+.pets_button {
+  margin: 62px auto 0;
+  margin-top: 62px;
+  letter-spacing: -1px;
+  @include media-tablet {
+    margin-top: 45px;
+  }
+  @include media-mobile {
+    margin-top: 7px;
+  }
+}
+
+.pets-palm {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-image: url('../assets/images/main/pets/palm-photo.jpg');
+  background-repeat: no-repeat;
+  width: 292px;
+  height: 460px;
+  z-index: -1;
+  @media (max-width: 1599px) {
+    width: 194px;
+    height: 202px;
+    background-image: url('../assets/images/main/pets/small-desc-palm.jpg');
+  }
+  @include media-tablet {
+    width: 123px;
+    background-image: url('../assets/images/main/pets/tablet-palm.png');
+  }
+  @include media-mobile {
+    width: 56px;
+    height: 72px;
+    background-image: url('../assets/images/main/pets/mobile-palm.png');
+  }
+}
+
+.pets-flower {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-image: url('../assets/images/main/pets/pets-flower.jpg');
+  background-repeat: no-repeat;
+  width: 358px;
+  height: 275px;
+  z-index: -1;
+  @media (max-width: 1599px) {
+    width: 241px;
+    height: 180px;
+    background-image: url('../assets/images/main/pets/small-desc-flower.jpg');
+  }
+  @include media-tablet {
+    width: 175px;
+    height: 131px;
+    background-image: url('../assets/images/main/pets/tablet-flower.png');
+  }
+  @include media-mobile {
+    width: 71px;
+    height: 71px;
+    background-image: url('../assets/images/main/pets/mobile-flower.jpg');
+    right: 0;
+    bottom: -5px;
+  }
+}

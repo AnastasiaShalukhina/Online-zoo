@@ -1,0 +1,102 @@
+.pop-up-testimonials {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $burger-blackout;
+  opacity: 0; 
+  visibility: hidden; 
+  z-index: 22;
+  transition: all ease 0.6s;
+}
+
+.pop-up-opened {
+  opacity: 1;
+  visibility: visible;
+}
+
+.pop-up__blackout {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pop-up__wrapper {
+  position: relative;
+  padding: 20px 36px 17px 17px;
+  background: $color-input-backgr;
+  max-width: 320px;
+}
+
+.pop-up__close {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  width: 14px;
+  height: 14px;
+  background-image: url("../assets/images/icons/x_icon.png");
+  cursor: pointer;
+}
+
+.pop-up__content {
+  width: 235px;
+  padding: 15px 15px 19px 16px;
+  flex-shrink: 0;
+  background: $color-feedback-backgr;
+  border-radius: 20px;
+  border: 2px solid rgba(254, 189, 171, 0.74);
+}
+
+.pop-up__data {
+  display: flex;
+}
+
+.pop-up__photo {
+  display: block;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.pop-up__name {
+  margin: 0;
+  @include font ($style: normal, $weight: 400, $size: 1.6rem, $height: 1.92rem);
+  margin-bottom: 1px;
+  color: $color-backgr-header;
+}
+
+.pop-up__tag {
+  @include font ($style: normal, $weight: 300, $size: 1.5rem, $height: 1.8rem);
+  color: $color-light-text;
+  position: relative;
+}
+
+.span-distance {
+  margin-left: 10px;
+}
+
+.dot::after {
+  content: ".";
+  margin-left: 6px;
+  position: absolute;
+  bottom: 5px;
+}
+
+.pop-up__text {
+  margin-top: 10px;
+  @include font ($style: normal, $weight: 300, $size: 1.5rem, $height: 1.8rem);
+  color: $color-btn-disabled;
+  overflow: hidden;
+  text-overflow: clip;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 17;
+  -webkit-box-orient: vertical;
+  line-clamp: 17;
+  box-orient: vertical;
+}

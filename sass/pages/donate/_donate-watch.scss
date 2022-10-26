@@ -1,0 +1,31 @@
+.background-wrapper.donate__wrapper {
+  background-image: url('../assets/images/main/watch/giant-panda.png');
+  background-repeat: no-repeat;
+  
+
+  @include media-small-descktop {
+    background-size: auto;
+    background-position: -174px -111px;
+  }
+
+  @include media-tablet {
+    background-position: -369px -172px;
+  }
+
+  @include media-mobile {
+    background-image: url('../assets/images/main/watch/mobile-giant-panda.png');
+    background-position: 1px -1px;
+    background-size: cover;
+  }
+}
+
+.donate-watch__wrapper {
+  min-height: 390px;
+  @include media-tablet {
+    min-height: 336px;
+  }
+  @include media-mobile {
+    min-height: 187px;
+  }
+}
+

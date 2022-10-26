@@ -1,0 +1,284 @@
+.peek {
+  background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+  opacity: 0.9;
+}
+
+.peek__wrapper {
+  padding: 69px 0 100px;
+  @include media-small-descktop {
+    padding: 32px 0 50px;
+  }
+  @include media-tablet {
+    max-width: 640px;
+    padding: 20px 0;
+  }
+  @include media-mobile {
+    padding: 20px 10px;
+  }
+}
+
+.peek__container {
+  padding: 41px 0 59px;
+  background: rgba(253, 253, 255, 0.52);
+  border-radius: 20px;
+  @include media-small-descktop {
+    padding: 30px 0 50px;
+  }
+  @include media-tablet {
+    padding: 10px 0 60px;
+  }
+  @include media-mobile {
+    padding: 20px 0 40px;
+  }
+}
+
+.peek__title {
+  text-align: center;
+  color: $title-colored;
+  margin-bottom: 30px;
+  @include media-small-descktop {
+    margin-bottom: 20px;
+  }
+  @include media-tablet {
+    @include font ($style: normal, $weight: 400, $size: 4.2rem, $height: 5.04rem);
+    margin-bottom: 20px;
+  }
+  @include media-mobile {
+    @include font ($style: normal, $weight: 400, $size: 2.4rem, $height: 2.88rem);
+    margin-bottom: 10px;
+  }
+}
+
+.peek__text-container {
+  margin-left: 99px;
+  @include media-small-descktop {
+    margin-left: 0;
+    padding-left: 49px;
+    padding-right: 48px;
+  }
+  @include media-tablet {
+    padding: 0 20px;
+  }
+  @include media-mobile {
+    padding: 0 0;
+  }
+
+  & .peek__subtitle {
+    margin-bottom: 40px;
+    @include media-small-descktop {
+      margin-bottom: 20px;
+    }
+    @include media-tablet {
+      @include font ($style: normal, $weight: 400, $size: 2.2rem, $height: 2.64rem);
+      margin-bottom: 20px;
+    }
+    @include media-mobile {
+      @include font ($style: normal, $weight: 400, $size: 1.8rem, $height: 2.16rem);
+      text-align: center;
+    }
+  }
+
+  & .peek__bolder-text {
+    margin: 0;
+    margin-bottom: 10px;
+    @include font ($style: normal, $weight: 500, $size: 1.6rem, $height: 2.08rem);
+    @include media-mobile {
+      display: none;
+    }
+  }
+
+  & .peek__lighter-text {
+    margin: 0;
+    margin-bottom: 60px;
+    @include font ($style: normal, $weight: 400, $size: 1.6rem, $height: 2.08rem);
+    @include media-small-descktop {
+      margin-bottom: 40px;
+    }
+    @include media-tablet {
+      margin-bottom: 30px;
+    }
+    @include media-mobile {
+      display: none;
+    }
+  }
+
+  & .peek__lighter-link {
+    display: inline-block;
+    margin: 0;
+    color: $color-text;
+    @include font ($style: normal, $weight: 400, $size: 1.6rem, $height: 2.08rem);
+    text-decoration: none;
+    border-bottom: 1px solid $title-colored;
+  }
+}
+
+.peek__header {
+  text-align: center;
+  margin-bottom: 40px;
+  @include media-tablet {
+    margin-bottom: 20px;
+  }
+  @include media-mobile {
+    @include font ($style: normal, $weight: 400, $size: 2.4rem, $height: 2.88rem);
+  }
+}
+
+.works-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  max-width: 765px;
+  margin: 0 auto;
+  @include media-tablet {
+    padding: 0 20px;
+  }
+  @include media-mobile {
+    flex-direction: column;
+  }
+}
+
+.works-container__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  & .card__icon {
+    width: 168px;
+    height: 168px;
+    background: $color-light;
+    border: 1px solid $title-colored;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+    & .icon-money {
+      width: 108px;
+      height: 60px;
+      background: url('../assets/images/icons/peek-card.svg');
+    }
+
+    & .icon-plant {
+      width: 86px;
+      height: 95px;
+      background: url('../assets/images/icons/peek-plant.svg');
+    }
+
+    & .icon-monkey {
+      width: 127px;
+      height: 73px;
+      background: url('../assets/images/icons/peek-monkey.svg');
+    }
+  }
+
+  .icon__description {
+    margin: 0;
+    text-align: left;
+    margin-top: 11px;
+  }
+
+  .description__money {
+    margin-right: 70px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    @include media-tablet {
+      margin-bottom: 26px;
+    }
+    @include media-mobile {
+      margin-top: 10px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .description__zoo {
+    margin-top: 29px;
+  }
+
+  .description__zoo, .description__monkey {
+    @include media-tablet {
+      margin-right: 19px;
+    }
+    @include media-mobile {
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .description__monkey {
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+}
+
+.works-container__card.monkey-element {
+  @include media-tablet {
+    margin-right: 10px;
+  }
+  @include media-mobile {
+    margin-right: 0;
+  }
+}
+
+.works-container__arrow {
+  width: 71px;
+  height: 37px;
+  background: url('../assets/images/icons/peek-arrow.svg');
+  margin-top: 60px;
+  @include media-tablet {
+    display: none;
+  }
+}
+
+.peek__button {
+  margin: 65px auto 0;
+  letter-spacing: -1px;
+  @include media-small-descktop {
+    margin: 68px auto 0;
+  }
+  @include media-tablet {
+    margin: 40px auto 0;
+  }
+  @include media-mobile {
+    width: 290px
+  }
+}
+
+.arrow__decor-left, .arrow__decor-right {
+  display: none;
+  @include media-tablet {
+    display: block;
+    width: 82px;
+    height: 70px;
+    position: absolute;
+    background: url('../assets/images/main/peek/tablet-green-arrow.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  @include media-mobile {
+    transform: rotate(90deg);
+  }
+}
+
+.arrow__decor-left {
+  @include media-tablet {
+    top: -8%;
+    left: 25%;
+  }
+  @include media-mobile {
+    top: 24%;
+    left: 63%;
+  }
+}
+
+.arrow__decor-right {
+  @include media-tablet {
+    top: -8%;
+    left: 58%;
+  }
+  @include media-mobile {
+    top: 59%;
+    left: 63%;
+  }
+}

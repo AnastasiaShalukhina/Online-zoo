@@ -1,0 +1,14 @@
+.wrapper {
+  max-width: $wrapper-desctop;
+  margin: 0 auto;
+
+  @include media-small-descktop {
+    max-width: $wrapper-small-descktop;
+  }
+  @include media-tablet {
+    max-width: $wrapper-tablet;
+  }
+  @include media-mobile {
+    max-width: $wrapper-mobile;
+  }
+}

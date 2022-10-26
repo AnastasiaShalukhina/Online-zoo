@@ -1,0 +1,33 @@
+@import "../../node_modules/normalize-scss/sass/normalize";
+@include normalize();
+
+// absracts
+@import "./abstracts/constants";
+@import "./abstracts/mixins";
+@import "./abstracts/placeholder";
+
+// base
+@import "./base/base";
+
+// layouts
+@import "./layouts/wrapper";
+@import "./layouts/header";
+@import "./layouts/footer";
+@import "./layouts/burger";
+@import "./layouts/pop-up";
+
+// pages
+   //main
+@import "./pages/main/watch";
+@import "./pages/main/backstage";
+@import "./pages/main/pets";
+@import "./pages/main/peek";
+@import "./pages/main/testimonials";
+   //donate
+@import "./pages/donate/donate-watch";
+@import "./pages/donate/donate-feed";
+
+// carousel
+@import "./carousel/carousel";
+@import "./carousel/carouselTestimonials";
+

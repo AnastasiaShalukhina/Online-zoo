@@ -1,0 +1,112 @@
+.backstage {
+  position: relative;
+}
+
+.button__backstage {
+  display: none;
+  @include media-mobile {
+    display: block;
+    margin: 20px auto 0;
+  }
+}
+
+.backstage__container {
+  display: grid;
+  grid-template-columns: 52.5% 40%;
+  grid-column-gap: 7.5%;
+  padding: 140px 0 77px;
+  @include media-small-descktop {
+    grid-template-columns: 48.4% 48.4%;
+    grid-column-gap: 3.2%;
+    padding: 100px 0 35px;
+  }
+  @media (max-width: 855px) {
+    padding: 60px 0 77px;
+    display: block;
+    max-width: 495px;
+    margin-left: 20px;
+  }
+  @include media-mobile {
+    padding: 34px 0 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+.backstage-image {
+  background-image: url('../assets/images/main/backstage/bamboo-cap.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(2px);
+  @include media-small-descktop {
+    background-position-x: -95px;
+  }
+  @media (max-width: 999px) {
+    display: none;
+  }
+}
+
+.backstage-description {
+  text-align: left;
+  color: $color-text;
+}
+
+.backstage-title {
+  @include media-mobile {
+    @include font($style :normal, $weight: 400, $size: 2.4rem, $height: 2.88rem);
+  }
+}
+
+.backstage__small-text {
+  @include font($style :normal, $weight: 400, $size: 1.6rem, $height: 2.08rem);
+  margin: 0;
+  margin: 20px 0 54px;
+  @media (max-width: 855px) {
+    margin: 20px 0 30px;
+  }
+  @include media-mobile {
+    margin: 10px 0 20px;
+  }
+}
+
+.backstage__fulltext {
+  margin: 0;
+  margin-top: 34px;
+  @media (max-width: 855px) {
+    margin-top: 20px;
+  }
+  @include media-mobile {
+    margin-top: 10px;
+  }
+}
+
+.backstage__flowers {
+  position: absolute; 
+  right: 0; 
+  bottom: 0; 
+  background-image: url('../assets/images/main/backstage/flowers.png');
+  background-repeat: no-repeat;
+  width: 186px;
+  height: 605px;
+  @media (max-width: 1500px) {
+      width: 0;
+      height: 0;
+  }
+  @media (width: 640px) {
+    background-image: url('../assets/images/main/backstage/flowers-tablet.png');
+    width: 131px;
+    height: 476px;
+    left: 508px;
+    bottom: 32px;
+  }
+  @media (min-width: 321px) and (max-width: 639px)  {
+    display: none;
+  }
+  @media (width: 320px) {
+    background-image: url('../assets/images/main/backstage/flowers-mobile.png');
+    width: 21px;
+    height: 217px;
+    right: 0;
+    bottom: 270px;
+  }
+}
